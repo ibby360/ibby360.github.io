@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+* {
+    box-sizing: border-box;
+    letter-spacing: 0
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Abel', sans-serif;
+}
+
+#cover {
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    background: url(../assets/images/cover.jpg) center center no-repeat fixed #272a34;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12), inset 0 -10px 0 0 rgba(0, 0, 0, .1)
+}
+
+#photo {
+    width: 280px;
+    height: 460px;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 210px);
+    transform: translate(-50%, -50%);
+    transform-origin: center right;
+    background: url(../assets/images/tatted.jpg) center center no-repeat #000;
+    background-size: 100% auto
+}
+
+#photo::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #000;
+    height: 75px;
+    left: 0;
+    right: 0;
+    opacity: .8;
+    bottom: 0
+}
+
+#photo a {
+    text-decoration: none;
+}
+
+#contact-me {
+    background: #357af0;
+    color: #fff;
+    line-height: 45px;
+    width: 150px;
+    text-align: center;
+    bottom: 13px;
+    left: 50%;
+    font-size: 14px;
+    position: absolute;
+    z-index: 1;
+    transform: translateX(-50%);
+    transition: border-width linear .1s, border-radius linear .1s;
+    border: 0;
+    box-sizing: content-box;
+    border-bottom: 5px solid #2251a0;
+    border-radius: 3px;
+    border-bottom-right-radius: 4px 10px;
+    border-bottom-left-radius: 4px 10px
+}
+
+#contact-me:hover {
+    text-decoration: none;
+    border-bottom: 3px solid #2251a0;
+    border-bottom-right-radius: 3px 9px;
+    border-bottom-left-radius: 3px 9px
+}
+
+#contact-me i {
+    opacity: .5;
+    vertical-align: 1px
+}
+
+#my-profiles {
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    bottom: -2px
+}
+
+#my-profiles a {
+    transition: .4s;
+    height: 40px;
+    width: 40px;
+    margin: 5px 10px;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 20px;
+    text-align: center;
+    vertical-align: top;
+    line-height: 42px;
+    display: inline-block
+}
+
+#my-profiles a:hover {
+    color: #357af0;
+    background: #fff
+}
+
+#card,
+#photo {
+    box-shadow: 0 0 100px #000
+}
+
+#card {
+    margin-top: 0;
+    width: 420px;
+    height: 405px;
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 140px);
+    transform: translate(-50%, -50%);
+    transform-origin: left center;
+    font-size: 16px;
+    padding: 10px 40px;
+    background-color: #fff;
+    min-height: 100px;
+    color: #000;
+    letter-spacing: 0
+}
+
+#card h1 {
+    margin: 10px 0;
+    font-size: 32px;
+    font-weight: lighter;
+    line-height: 40px
+}
+
+#card h2 {
+    margin: 10px 0;
+    font-size: 26px;
+    font-weight: lighter;
+    line-height: 38px
+}
+
+#card hr {
+    margin: 30px auto
+}
+
+#card p {
+    font-weight: lighter;
+    line-height: 30px;
+    font-size: 20px;
+    margin: 20px auto
+}
+
+#support-banner {
+    transform: translate(-50%, 100%)!important
+}
+
+@media screen and (max-width:800px),
+screen and (max-height:500px) {
+    #cover {
+        height: 700px
+    }
+    #card {
+        left: 50%;
+        top: 245px;
+        width: 350px;
+        padding: 10px 20px;
+        transform: translateX(-50%)
+    }
+    #my-profiles a {
+        margin: 5px;
+        font-size: 15px
+    }
+    #photo {
+        height: 200px;
+        width: 200px;
+        left: 50%;
+        top: 30px;
+        background-position: center top;
+        border-radius: 100%;
+        transform: translateX(-50%);
+        overflow: hidden
+    }
+    #contact-me {
+        font-size: 10px;
+        line-height: 35px;
+        width: 110px;
+        bottom: 23px
+    }
+    #scroll-animation {
+        display: none
+    }
+}
