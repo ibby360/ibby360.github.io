@@ -1161,6 +1161,12 @@ textarea.form__field {
   position: relative;
   z-index: 1;
 }
+
+/* Tempolary fix */
+.home__content{
+  color: #f4f6fb;
+}
+
 @media only screen and (min-width: 48rem) {
   .home__content {
     left: 3.75rem;
@@ -3998,3 +4004,4 @@ button.swiper-pagination-bullet {
 .download-cv {
   padding-top: 3rem;
 }
+
